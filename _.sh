@@ -10,5 +10,6 @@ source src/every.sh
 source src/some.sh
 source src/contains.sh
 source src/invoke.sh
+source src/size.sh
 source src/tap.sh
 source src/now.sh

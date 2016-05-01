@@ -6,4 +6,5 @@ source src/reduce.sh
 source src/find.sh
 source src/filter.sh
 source src/reject.sh
+source src/tap.sh
 source src/now.sh

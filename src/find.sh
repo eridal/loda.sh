@@ -6,7 +6,11 @@ function _.find () {
 
   while read it; do 
 
-    eval "$@"
+    if [[ "$@" == *"$"* ]]; then
+      eval "$@"
+    else
+      eval "$@" "$it"
+    fi
 
     if [[ $? = 0 ]]; then
       echo "$it"

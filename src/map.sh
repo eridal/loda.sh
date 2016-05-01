@@ -2,11 +2,16 @@
 
 function _.map () {
 
+  local i=0
   local out
 
   while read it; do
 
-    out=$("$@" "$it")
+    if [[ "$@" == *"$"* ]]; then
+      out=$("$@")
+    else
+      out=$("$@" "$it")
+    fi
 
     declare -i ret=$?
 
@@ -15,5 +20,6 @@ function _.map () {
     fi
 
     echo "$out"
+    i=$(( i + 1 ))
   done
 }

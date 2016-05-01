@@ -3,4 +3,5 @@
 source src/each.sh
 source src/map.sh
 source src/reduce.sh
+source src/find.sh
 source src/now.sh
